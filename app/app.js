@@ -47,7 +47,7 @@ myNinjaApp.controller('NinjaController', ['$scope', '$http', function($scope, $h
   }
 
   $http.get('data/ninjas.json').then(function(data){
-    $scope.ninjas = data;
+    $scope.ninjas = data.data;
   })
   
 }])

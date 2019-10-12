@@ -8,7 +8,7 @@
               ng-show="ninja.thumbnail">
           <h3>{{ninja.name}} - {{ninja.rate | currency}}</h3>
           <div class="remove" ng-click="removeNinja(ninja)">x</div>
-          <span class="belt" style=`background: {{ninja.belt}}`>{{ninja.belt}} belt</span>
+          <span class="belt" style="background: {{ninja.belt}}">{{ninja.belt}} belt</span>
         </li>
       </ul>
       <form ng-submit="addNinja()">
