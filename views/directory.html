@@ -2,13 +2,13 @@
       <button ng-click="order = 'name'">Order By Name</button>
       <button ng-click="order = 'belt'">Order By Belt</button>
       <input type="text" ng-model="search" placeholder="Text to search"/> 
-      <ul>
+      <ul id="ninja-list">
         <li ng-repeat="ninja in ninjas | orderBy: order | filter: search" ng-show="ninja.available">
           <img ng-src="{{ninja.thumbnail}}" style="margin: -12px 10px 0 0; float: left; width: 50px" alt="A ninja"
               ng-show="ninja.thumbnail">
           <h3>{{ninja.name}} - {{ninja.rate | currency}}</h3>
           <div class="remove" ng-click="removeNinja(ninja)">x</div>
-          <span class="belt" style="background: {{ninja.belt}}">{{ninja.belt}} belt</span>
+          <span class="belt" style=`background: {{ninja.belt}}`>{{ninja.belt}} belt</span>
         </li>
       </ul>
       <form ng-submit="addNinja()">
