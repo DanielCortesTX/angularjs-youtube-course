@@ -1,14 +1,16 @@
 var myNinjaApp = angular.module('myNinjaApp', ['ngRoute', 'ngAnimate']);
 
 myNinjaApp.config(['$routeProvider', function($routeProvider){
-  $routeProvider.when('/home', {
+
+  $routeProvider
+    .when('/home', {
     templateUrl: 'views/home.html',
     controller: 'NinjaController'
   }).when('/directory', {
     templateUrl: 'views/directory.html',
     controller: 'NinjaController'
   }).otherwise({
-    redirectTo: '/home'
+    redirectTo: '/directory'
   })
 }]);
 
